@@ -1,6 +1,7 @@
 balance = 0
 def current_balance():
     print(f"Current Balance: ₱{balance}")
+
 def withdraw_money():
     global balance
     try:
@@ -10,15 +11,14 @@ def withdraw_money():
         amount = float(input("Enter the amount to withdraw: "))
         if amount > balance:
             print("Insufficient funds. Withdrawal failed.")
-        else:
-            amount = float(input("Enter the amount to withdraw: "))
-            if amount > balance:
+        elif amount > balance:
                 print("Insufficient funds. Withdrawal failed.")
-            else:
-                balance -= amount
-                print(f"Withdrawal successful. New balance: ₱{balance}")
+        else:
+            balance -= amount
+            print(f"Withdrawal successful. New balance: ₱{balance}")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
+
 def deposit_money():
     global balance
     try:
@@ -30,7 +30,6 @@ def deposit_money():
             print(f"Deposit successful. New balance: ₱{balance}")
     except ValueError:
         print("Invalid input. Please enter a valid number.")
-
 
 
 while True:
