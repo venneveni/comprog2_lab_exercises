@@ -11,8 +11,6 @@ def withdraw_money():
         amount = float(input("Enter the amount to withdraw: "))
         if amount > balance:
             print("Insufficient funds. Withdrawal failed.")
-        elif amount > balance:
-                print("Insufficient funds. Withdrawal failed.")
         else:
             balance -= amount
             print(f"Withdrawal successful. New balance: ₱{balance}")
